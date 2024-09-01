@@ -1,5 +1,5 @@
 # Transformers-for-Everything
-This repo consists of different codebases of transformers and their applications in recent Large Models in vision and language. These codebases are coded and trained from scratch and replicated from different papers and authors. 
+This repo consists of different codebases of transformers and their applications in recent Large Models in vision and language. 
 
 **Why do you need this repo?** 🤔  <br>
 There is not much documented, not good enough, if it is, to follow through and understand each bit of code so that people can reproduce something of their own. This repo has (overstating because if not, it will be updated) all the mechanisms in the most advanced and sought-after papers.
