@@ -2,6 +2,9 @@
 ![transformers](assets/transformers.png)
 
 This repo is built on a basic implementation of transformers: `Generative Pre-Trained Transformer.` as designed by Radford et al. in their paper *"Improving Language Understanding by Generative Pre-Training"* <br>
+
+It is important to note that GPT is an `encoder-decoder` model, unlike the other versions of GPT that we all currently use. <br>
+
 The architecture has the following modules:
 - **MHSA**: Multi-headed self attention
 - **FeedForward Network**: Connects MHSA to linear projection for transforming *embedding dimension* to *vocabulary size**
