@@ -1,7 +1,0 @@
-- Block_size=8
-- Batch_size=32
-- emb_dim=256
-- head_size=32
-- num_heads=8
-- num_layers=2
-- vocab_size = vocab size of the tokenizer.
