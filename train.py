@@ -51,6 +51,12 @@ def main():
             optimizer.step()
         if epoch%50==0:
             print(f"Epoch: {epoch}, Loss: {loss.item()}")
+    
+    print("Training Completed...")
+    print("Checking Inference after training...")
+    sentence = "The sun is shining"
+    res = inference(sentence, model, encoder, device)
+    print(res)
 
 
 if __name__ == "__main__":

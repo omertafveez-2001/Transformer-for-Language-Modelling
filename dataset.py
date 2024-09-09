@@ -5,6 +5,7 @@ import tiktoken
 import nltk
 import numpy as np
 import torch
+import requests
 
 
 def get_data(BLOCK_SIZE: int, BATCH_SIZE: int, encoder):
@@ -13,10 +14,17 @@ def get_data(BLOCK_SIZE: int, BATCH_SIZE: int, encoder):
 
     PATH = pathlib.Path().resolve()
     nltk.download('stopwords')
-    path = PATH/"Data"/"novels.txt"
     print("Fetching Data...")
-    with open(path, 'r', encoding='utf-8') as file:
+
+    url = "https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt"
+    response = requests.get(url)
+
+    with open('input.txt', 'w') as f:
+        f.write(response.text)
+    
+    with open('input.txt', 'r', encoding='utf-8') as file:
         lines = file.readlines()
+    print("File downloaded successfully")
     scripts = ''.join(lines)
 
     # preprocessing text
